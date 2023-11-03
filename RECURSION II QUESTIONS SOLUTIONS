@@ -1,5 +1,33 @@
 ANS:1--
 TOWER OF HANOI--
+class Hanoi {
+    
+
+    public static long toh(int N, int from, int to, int aux) 
+    {
+        int count=1;
+      
+        if(N==1)
+        {
+           
+           // return 0;
+           return count;
+        }
+       
+        count+= toh(N-1,from,aux,to);
+       
+        count+= toh(N-1,aux,to,from);
+         return count;
+        
+    }
+      public static void main(String args[])
+    {
+        
+       System.out.println(toh(3,'A','B','C'));
+    }
+    
+}
+       
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ANS:2--
 GENERATE KTH SYMBOL OF NTH ROW--
